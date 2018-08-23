@@ -1,7 +1,11 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": "bootcamp123",
+=======
+    "password": "password",
+>>>>>>> bfe22a47ef3be8ef90aabdebf8cd276d62331369
     "database": "exampledb",
     "host": "localhost",
     "dialect": "mysql"
