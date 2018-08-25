@@ -1,19 +1,23 @@
 // Get references to page elements
-var $exampleText = $("#example-text");
-var $exampleDescription = $("#example-description");
-var $submitBtn = $("#submit");
-var $exampleList = $("#example-list");
+var $userName = $("#nameInput");
+var $userCity = $("#cityInput");
+var $userStart = $("#startDate");
+var $userEnd = $("#endDate")
+var $submitBtn = $("#planFormSubmit");
+//change for area to show example data
+// var $exampleList = $("#example-list");
 
 // The API object contains methods for each kind of request we'll make
+//
 var API = {
-  saveExample: function(example) {
+  saveUsers: function(users) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
       },
       type: "POST",
-      url: "api/examples",
-      data: JSON.stringify(example)
+      url: "api/trips",
+      data: JSON.stringify(users)
     });
   },
   getExamples: function() {
@@ -64,7 +68,7 @@ var refreshExamples = function() {
 var handleFormSubmit = function(event) {
   event.preventDefault();
 
-  var example = {
+  var userData = {
     text: $exampleText.val().trim(),
     description: $exampleDescription.val().trim()
   };
@@ -96,4 +100,5 @@ var handleDeleteBtnClick = function() {
 
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
-$exampleList.on("click", ".delete", handleDeleteBtnClick);
+//change later when delete function and things are set up
+// $exampleList.on("click", ".delete", handleDeleteBtnClick);
