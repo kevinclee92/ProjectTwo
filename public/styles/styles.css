@@ -1,7 +1,42 @@
+body {
+  width: 100%;
+}
+
+
+
 .list-group-item {
   line-height: 2.5;
 }
 
-.container {
+.formTitleSection {
   text-align: center;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  background-color: red;
+
+}
+
+#tripExamples {
+  height: 100px;
+  width: 100%;
+  background-color: yellow;
+}
+
+#plannedCost {
+  width: 50%;
+}
+
+#expenseFormSubmit {
+  margin-top: 10px;
+}
+
+#planFormSubmit {
+  margin-top: 15px;
 }
