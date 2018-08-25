@@ -9,8 +9,6 @@ module.exports = function(sequelize, DataTypes) {
   });
 
   Trip.associate = function(models) {
-    // Associating Author with Posts
-    // When an Author is deleted, also delete any associated Posts
     Trip.hasMany(models.Budget, {
       onDelete: "cascade"
     });
