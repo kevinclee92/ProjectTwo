@@ -1,30 +1,37 @@
 // Get references to page elements
-var $exampleText = $("#example-text");
-var $exampleDescription = $("#example-description");
-var $submitBtn = $("#submit");
-var $exampleList = $("#example-list");
+var $userName = $("#nameInput");
+var $userCity = $("#cityInput");
+var $userStart = $("#startDate");
+var $userEnd = $("#endDate")
+var $submitBtn = $("#planFormSubmit");
+//change for area to show example data
+// var $exampleList = $("#example-list");
 
 // The API object contains methods for each kind of request we'll make
+//
 var API = {
-  saveExample: function(example) {
+  //saving the user infomation
+  saveUsers: function(users) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
       },
       type: "POST",
-      url: "api/examples",
-      data: JSON.stringify(example)
+      url: "api/tripPlanning",
+      data: JSON.stringify(users)
     });
   },
-  getExamples: function() {
+  // showing userinfo
+  show: function() {
     return $.ajax({
-      url: "api/examples",
+      url: "api/tripPlanning",
       type: "GET"
     });
   },
+  // deleting users
   deleteExample: function(id) {
     return $.ajax({
-      url: "api/examples/" + id,
+      url: "api/tripPlanning/" + id,
       type: "DELETE"
     });
   }
@@ -33,10 +40,11 @@ var API = {
 // refreshExamples gets new examples from the db and repopulates the list
 var refreshExamples = function() {
   API.getExamples().then(function(data) {
-    var $examples = data.map(function(example) {
+    var $user = data.map(function(users) {
+      // change trip plal
       var $a = $("<a>")
-        .text(example.text)
-        .attr("href", "/example/" + example.id);
+        .text(users.text)
+        .attr("href", "/tripPlanning/" + users.id);
 
       var $li = $("<li>")
         .attr({
@@ -55,7 +63,7 @@ var refreshExamples = function() {
     });
 
     $exampleList.empty();
-    $exampleList.append($examples);
+    $exampleList.append($user);
   });
 };
 
@@ -64,9 +72,11 @@ var refreshExamples = function() {
 var handleFormSubmit = function(event) {
   event.preventDefault();
 
-  var example = {
-    text: $exampleText.val().trim(),
-    description: $exampleDescription.val().trim()
+  var userData = {
+    userName: $userName.val().trim(),
+    userCity: $userCity.val().trim(),
+    userStart: $userStart.val().trim(),
+    userEnd: $userEnd.val().trim()
   };
 
   if (!(example.text && example.description)) {
@@ -96,4 +106,5 @@ var handleDeleteBtnClick = function() {
 
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
-$exampleList.on("click", ".delete", handleDeleteBtnClick);
+//change later when delete function and things are set up
+// $exampleList.on("click", ".delete", handleDeleteBtnClick);

@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "bootcamp123",
-    "database": "exampledb",
+    "password": null,
+    "database": "plannerdb",
     "host": "localhost",
     "dialect": "mysql"
   },
