@@ -10,25 +10,28 @@ var $submitBtn = $("#planFormSubmit");
 // The API object contains methods for each kind of request we'll make
 //
 var API = {
+  //saving the user infomation
   saveUsers: function(users) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
       },
       type: "POST",
-      url: "api/trips",
+      url: "api/tripPlanning",
       data: JSON.stringify(users)
     });
   },
-  getExamples: function() {
+  // showing userinfo
+  show: function() {
     return $.ajax({
-      url: "api/examples",
+      url: "api/tripPlanning",
       type: "GET"
     });
   },
+  // deleting users
   deleteExample: function(id) {
     return $.ajax({
-      url: "api/examples/" + id,
+      url: "api/tripPlanning/" + id,
       type: "DELETE"
     });
   }
@@ -37,10 +40,11 @@ var API = {
 // refreshExamples gets new examples from the db and repopulates the list
 var refreshExamples = function() {
   API.getExamples().then(function(data) {
-    var $examples = data.map(function(example) {
+    var $user = data.map(function(users) {
+      // change trip plal
       var $a = $("<a>")
-        .text(example.text)
-        .attr("href", "/example/" + example.id);
+        .text(users.text)
+        .attr("href", "/tripPlanning/" + users.id);
 
       var $li = $("<li>")
         .attr({
@@ -59,7 +63,7 @@ var refreshExamples = function() {
     });
 
     $exampleList.empty();
-    $exampleList.append($examples);
+    $exampleList.append($user);
   });
 };
 
@@ -69,8 +73,10 @@ var handleFormSubmit = function(event) {
   event.preventDefault();
 
   var userData = {
-    text: $exampleText.val().trim(),
-    description: $exampleDescription.val().trim()
+    userName: $userName.val().trim(),
+    userCity: $userCity.val().trim(),
+    userStart: $userStart.val().trim(),
+    userEnd: $userEnd.val().trim()
   };
 
   if (!(example.text && example.description)) {
