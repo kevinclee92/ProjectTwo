@@ -18,12 +18,13 @@ var expenseAPI = {
     });
   }
 };
-var handleExpenseSubmit = function(event){
+var handleExpenseSubmit = function(event) {
   event.preventDefault();
   var expenseData = {
     userExpenseType: $expenseSelect.val(),
     userPlannedCost: $plannedCost.val().trim()
   };
+  //add promise function
   expenseAPI.postExpenses(expenseData);
 };
 

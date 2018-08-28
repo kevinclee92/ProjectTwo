@@ -84,7 +84,7 @@ var handleFormSubmit = function(event) {
     return;
   }
 
-  API.saveExample(example).then(function() {
+  API.saveExample(userData).then(function() {
     refreshExamples();
   });
 
