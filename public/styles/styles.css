@@ -1,4 +1,170 @@
+html {
+  width: 100%;
+  height: 100%;
+
+}
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.nav {
+  width: 100%;
+}
+
+.nav-link {
+  color: darkblue;
+  font-weight: bolder;
+  float: right;
+  font-size: 20px;
+}
+
+.logo {
+  color: whitesmoke;
+  font-family: 'Lobster', cursive;
+  margin-top: 11px;
+  margin-left: 35px; 
+}
+
+.navOptions {
+  margin-top: 9px;
+  width: 80%;
+}
+
+#planning {
+  position: relative;
+}
+
+
 .list-group-item {
   line-height: 2.5;
 }
 
+.formTitleSection {
+  text-align: center;
+}
+
+.plan {
+  margin-top: 30px;
+}
+
+.expense {
+  margin-top: 30px;
+}
+
+.form {
+  border: solid darkblue 3px;
+  border-radius: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+label {
+  font-weight: bolder;
+}
+
+#planForm input {
+  width: 300px;
+  display: inline;
+  margin-bottom: 15px;
+}
+.front-page {
+  text-align: center;
+  color: darkblue;
+  text-emphasis: bold;
+
+}
+
+#planning::after {
+  content: "";
+  background: url(../images/background.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+#home {
+  position: relative;
+
+}
+.description {
+  text-emphasis: bold;
+}
+
+#home::after {
+  content: "";
+  background: url(../images/bg4.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: -1;
+}
+.footerArea {
+  height: 60px;
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+  text-align: center;
+  text-emphasis: bold;
+}
+.getStarted {
+  background-color: darkblue;
+}
+
+.copyright {
+  margin-top: 10px;
+  color: white;
+}
+
+#tripExamples {
+  height: 200px;
+  width: 100%;
+  border: solid darkblue 3px;
+  border-radius: 25px;
+}
+
+#plannedCost {
+  width: 50%;
+  display: inline;
+}
+
+#expenseAdd {
+  display: inline;
+}
+
+#expenseFormSubmit {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 20px;
+  background-color: darkblue;
+  border: darkblue;
+}
+
+#planFormSubmit {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 20px;
+  float: right;
+  background-color: darkblue;
+  border: darkblue;
+}
+.homecopyright {
+  margin-top: 10px;
+  color: darkblue;
+}

@@ -5,6 +5,19 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     res.render("index");
   });
+  app.get("/tripPlanning", function(req, res) {
+    res.render("tripPlanning");
+  });
+  app.get("/tripPlanningDetails", function(req, res) {
+    res.render("tripPlanningDetails");
+  });
+  app.get("/city", function(req, res) {
+    res.render("city");
+  });
+  app.get("/login", function(req, res) {
+    res.render("login");
+  });
+
 
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {
