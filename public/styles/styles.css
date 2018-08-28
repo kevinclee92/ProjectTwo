@@ -94,7 +94,7 @@ label {
 
 #search::after {
   content: "";
-  background: url(../images/background.jpeg);
+  background: url(../images/bg2.jpeg);
   background-size: cover;
   background-attachment: fixed;
   opacity: 0.5;
@@ -103,8 +103,7 @@ label {
   bottom: 0;
   right: 0;
   position: fixed;
-  z-index: -1;
-  
+  z-index: -1; 
 }
 
 
