@@ -3,8 +3,19 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
+    res.render("index");
+  });
+  app.get("/tripPlanning", function(req, res) {
     res.render("tripPlanning");
   });
+  app.get("/tripPlanningDetails", function(req, res) {
+    res.render("tripPlanningDetails");
+  });
+  app.get("/city", function(req, res) {
+    res.render("city");
+  });
+
+
 
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {
