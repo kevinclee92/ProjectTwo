@@ -1,5 +1,2 @@
-
 DROP DATABASE IF EXISTS plannerdb;
-
 CREATE DATABASE plannerdb;
-
