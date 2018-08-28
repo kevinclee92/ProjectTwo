@@ -1,7 +1,175 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.nav {
+  width: 100%;
+}
+
+.nav-link {
+  color: darkblue;
+  font-weight: bolder;
+  float: right;
+  font-size: 20px;
+}
+
+.logo {
+  color: whitesmoke;
+  font-family: 'Lobster', cursive;
+  margin-top: 11px;
+  margin-left: 35px; 
+}
+
+.navOptions {
+  margin-top: 9px;
+  width: 80%;
+}
+
+#planning {
+  position: relative;
+}
+
+
 .list-group-item {
   line-height: 2.5;
 }
 
-.container {
+.formTitleSection {
   text-align: center;
 }
+
+.plan {
+  margin-top: 30px;
+}
+
+.expense {
+  margin-top: 30px;
+}
+
+.form {
+  border: solid darkblue 3px;
+  border-radius: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+label {
+  font-weight: bolder;
+}
+
+#planForm input {
+  width: 300px;
+  display: inline;
+  margin-bottom: 15px;
+}
+
+.searchForm {
+  text-align: center;
+}
+
+#searchLabel {
+  display: inline;
+}
+
+#search {
+  position: relative;
+  background-size: cover;
+}
+
+#searchResults {
+  margin-top: 50px;
+  
+}
+
+#searchInput {
+  display: inline;
+  width: 50%;
+}
+
+#search::after {
+  content: "";
+  background: url(../images/background.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: -1;
+  
+}
+
+
+#planning::after {
+  content: "";
+  background: url(../images/background.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: -1;
+}
+
+.footerArea {
+  height: 60px;
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+}
+
+
+.copyright {
+  margin-top: 10px;
+  color: white;
+}
+
+#tripExamples {
+  height: 200px;
+  width: 100%;
+  border: solid darkblue 3px;
+  border-radius: 25px;
+}
+
+#plannedCost {
+  width: 50%;
+  display: inline;
+}
+
+#expenseAdd {
+  display: inline;
+}
+
+#expenseFormSubmit {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: darkblue;
+  border: darkblue;
+}
+
+#planFormSubmit {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 20px;
+  float: right;
+  background-color: darkblue;
+  border: darkblue;
+}
+
