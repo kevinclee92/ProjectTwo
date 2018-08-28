@@ -14,7 +14,7 @@ if (config.use_env_variable) {
   var sequelize = new Sequelize(
     process.env.DB_DATABASE,
     process.env.DB_USER,
-    process.env.DB_PASS,
+    process.env.DB_PASSWORD,
     config
   );
 }
@@ -22,7 +22,7 @@ if (config.use_env_variable) {
 fs.readdirSync(__dirname)
   .filter(function(file) {
     return (
-      file.indexOf(".") !== 0 && file !== basename && file.slice(-3) === ".js"
+      file.indexOf(".") !== 0 && file !== basename && file.slice(-3) === "Index.js"
     );
   })
   .forEach(function(file) {
