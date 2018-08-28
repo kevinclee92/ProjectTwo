@@ -1,7 +1,6 @@
 html {
   width: 100%;
   height: 100%;
-
 }
 
 .row {
@@ -70,6 +69,45 @@ label {
   margin-bottom: 15px;
 }
 
+.searchForm {
+  text-align: center;
+}
+
+#searchLabel {
+  display: inline;
+}
+
+#search {
+  position: relative;
+  background-size: cover;
+}
+
+#searchResults {
+  margin-top: 50px;
+  
+}
+
+#searchInput {
+  display: inline;
+  width: 50%;
+}
+
+#search::after {
+  content: "";
+  background: url(../images/background.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: -1;
+  
+}
+
+
 #planning::after {
   content: "";
   background: url(../images/background.jpeg);
@@ -80,7 +118,7 @@ label {
   left: 0;
   bottom: 0;
   right: 0;
-  position: absolute;
+  position: fixed;
   z-index: -1;
 }
 
@@ -94,6 +132,7 @@ label {
   height: 60px;
   width: 100%;
   text-align: center;
+  position: fixed;
 }
 
 
@@ -121,7 +160,6 @@ label {
 #expenseFormSubmit {
   margin-top: 15px;
   margin-bottom: 15px;
-  margin-right: 20px;
   background-color: darkblue;
   border: darkblue;
 }

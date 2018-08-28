@@ -11,8 +11,8 @@ module.exports = function(app) {
   app.get("/tripPlanningDetails", function(req, res) {
     res.render("tripPlanningDetails");
   });
-  app.get("/city", function(req, res) {
-    res.render("city");
+  app.get("/search", function(req, res) {
+    res.render("search");
   });
 
 
