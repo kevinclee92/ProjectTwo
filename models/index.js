@@ -22,7 +22,7 @@ if (config.use_env_variable) {
 fs.readdirSync(__dirname)
   .filter(function(file) {
     return (
-      file.indexOf(".") !== 0 && file !== basename && file.slice(-3) === "Index.js"
+      file.indexOf(".") !== 0 && file !== basename && file.slice(-3) === "index.js"
     );
   })
   .forEach(function(file) {
