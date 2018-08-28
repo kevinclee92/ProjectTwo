@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
   var Budget = sequelize.define("Budget", {
     // Giving the Author model a name of type STRING
-    tripId: DataTypes.INTEGER,
+    tripId: DataTypes.INTEGER, 
     dailyHotelCost: DataTypes.NUMERIC,
     dailyMealCost: DataTypes.NUMERIC,
     airfareCost: DataTypes.NUMERIC,
@@ -13,7 +13,8 @@ module.exports = function(sequelize, DataTypes) {
     // Associating Author with Posts
     // When an Author is deleted, also delete any associated Posts
     models.Budget.belongsTo(models.Trip, {
-      foreignKey: "tripId"
+      foreignKey: "tripId",
+      targetKey: "id"
     });
   };
 

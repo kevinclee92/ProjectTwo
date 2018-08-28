@@ -1,13 +1,13 @@
 {
   "development": {
-    "username": "root",
+    "user": "root",
     "password": "Nuke1984",
     "database": "plannerdb",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
+    "user": "root",
     "password": "Nuke1984",
     "database": "testdb",
     "host": "localhost",

@@ -10,9 +10,13 @@ module.exports = function(sequelize, DataTypes) {
 
   Trip.associate = function(models) {
     Trip.hasMany(models.Budget, {
+      foreignKey: "tripId",
+      sourceKey: "id",
       onDelete: "cascade"
     });
     Trip.hasMany(models.Expense, {
+      foreignKey: "tripId",
+      sourceKey: "id",
       onDelete: "cascade"
     });
   };

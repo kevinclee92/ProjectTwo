@@ -11,7 +11,8 @@ module.exports = function(sequelize, DataTypes) {
 
   Expense.associate = function(models) {
     models.Expense.belongsTo(models.Trip, {
-      foreignKey: "tripId"
+      foreignKey: "tripId",
+      targetKey: "id"
     });
   };
   return Expense;
