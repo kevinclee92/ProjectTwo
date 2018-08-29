@@ -50,6 +50,13 @@ html {
 
 .expense {
   margin-top: 30px;
+  flex: 1;
+  margin: 30px;
+}
+
+.examples {
+  flex: 1;
+  margin: 30px;
 }
 
 .form {
@@ -57,6 +64,8 @@ html {
   border-radius: 25px;
   margin-left: auto;
   margin-right: auto;
+  padding: 15px;
+  height: 430px;
 }
 
 label {
@@ -121,9 +130,13 @@ label {
   z-index: -1;
 }
 
-.footerArea {
-  height: 60px;
+.page-content {
+  min-height: calc(100vh - 57px);
+  display: flex;
+  justify-content: center;
 }
+
+
 
 .footer {
   left: 0;
@@ -131,9 +144,7 @@ label {
   height: 60px;
   width: 100%;
   text-align: center;
-  position: fixed;
 }
-
 
 .copyright {
   margin-top: 10px;
