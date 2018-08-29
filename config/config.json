@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "coding123",
+    "password": null,
     "database": "plannerdb",
     "host": "localhost",
     "dialect": "mysql"

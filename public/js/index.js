@@ -2,7 +2,7 @@
 var $userName = $("#nameInput");
 var $userCity = $("#cityInput");
 var $userStart = $("#startDate");
-var $userEnd = $("#endDate")
+var $userEnd = $("#endDate");
 var $submitBtn = $("#planFormSubmit");
 //change for area to show example data
 // var $exampleList = $("#example-list");
@@ -94,15 +94,15 @@ var handleFormSubmit = function(event) {
 
 // handleDeleteBtnClick is called when an example's delete button is clicked
 // Remove the example from the db and refresh the list
-var handleDeleteBtnClick = function() {
-  var idToDelete = $(this)
-    .parent()
-    .attr("data-id");
+// var handleDeleteBtnClick = function() {
+//   var idToDelete = $(this)
+//     .parent()
+//     .attr("data-id");
 
-  API.deleteExample(idToDelete).then(function() {
-    refreshExamples();
-  });
-};
+//   API.deleteExample(idToDelete).then(function() {
+//     refreshExamples();
+//   });
+// };
 
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);

@@ -7,29 +7,36 @@ var $submitBtn = $("#planFormSubmit");
 // userAPI object for methods
 var userAPI = {
   // saving user date (POST)
-  saveUsers: function(users) {
+  saveUsers: function(user) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
       },
       type: "POST",
       url: "api/tripPlanning",
-      data: JSON.stringify(users)
+      data: JSON.stringify(user)
     });
+  },
+  testingClick: function() {
+    console.log("something");
   }
 };
 
 var handleUserSubmit = function(event) {
   event.preventDefault();
 
-  var userData = {
-    userName: $userName.val().trim(),
-    userCity: $userCity.val().trim(),
-    userStart: $userStart.val().trim(),
-    userEnd: $userEnd.val().trim()
+  var users = {
+    name: $userName.val().trim(),
+    city: $userCity.val().trim(),
+    startDate: $userStart.val().trim(),
+    endDate: $userEnd.val().trim()
+    //if using Google autocomplete we wont need country
   };
+  console.log(users);
+
+  userAPI.saveUsers(users);
   // add promise function
-  userAPI.saveUsers(userData);
+  // userAPI.saveUsers(users);
 };
 
 $submitBtn.on("click", handleUserSubmit);

@@ -21,8 +21,12 @@ var expenseAPI = {
 var handleExpenseSubmit = function(event) {
   event.preventDefault();
   var expenseData = {
-    userExpenseType: $expenseSelect.val(),
-    userPlannedCost: $plannedCost.val().trim()
+    //change to match models
+    dailyHotelExpense: $expenseSelect.val(),
+    dailyMealExpense: $something.val(),
+    airfareExpense: $somethingelse.val(),
+    transportationExpense: $something2.val(),
+    miscExpense: $something3.val()
   };
   //add promise function
   expenseAPI.postExpenses(expenseData);
