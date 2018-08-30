@@ -18,7 +18,7 @@ module.exports = function(app) {
   app.get("/login", function(req, res) {
     res.render("login");
   });
-  app.get("/trip", function(req, res) {
+  app.get("/submission", function(req, res) {
     res.render("trip");
   });
 
