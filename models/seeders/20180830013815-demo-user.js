@@ -1,7 +1,4 @@
-// INSERT INTO Trip (name, startDate, endDate, city, country) values ('James', '08/30/2018', '09/02/2018', 'San Diego', 'United States');
-// INSERT INTO Trip (name, startDate, endDate, city, country) values ('Bob', '09/15/2018', '09/17/2018', 'Tucson', 'United States');
-// INSERT INTO Trip (name, startDate, endDate, city, country) values ('Sam', '12/10/2018', '12/15/2018', 'Paris', 'France');
-// INSERT INTO Trip (name, startDate, endDate, city, country) values ('Kayla', '11/12/2018', '11/18/2018', 'Miami', 'United States');
+// To commit this seed file to your database, run "sequelize db:seed:all"
 
 'use strict';
 
@@ -34,5 +31,3 @@ module.exports = {
     return queryInterface.bulkDelete('Trip', null, {});
   }
 };
-
-// $ node_modules/.bin/sequelize db:seed:all
