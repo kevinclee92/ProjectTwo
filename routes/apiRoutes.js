@@ -1,26 +1,24 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // Get all user basic info
-  app.get("/api/tripPlanning", function(req, res) {
-    db.Trip.findAll({}).then(function(userExamples) {
-      res.json(userExamples);
+  // Get all trips
+  app.get("/api/trips", function(req, res) {
+    db.Trip.findAll({}).then(function(plannerdb) {
+      res.json(plannerdb);
     });
   });
 
-  // Create a new user data api
-  app.post("/api/tripPlanning", function(req, res) {
-    db.Trip.create(req.body).then(function(userExamples) {
-      res.json(userExamples);
+  // Create a new trip
+  app.post("/api/trips", function(req, res) {
+    db.Trip.create(req.body).then(function(plannerdb) {
+      res.json(plannerdb);
     });
   });
 
-  // app.get for city based search
-  // app.get("/api/")
-  // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.json(dbExample);
+  // Delete a trip by id
+  app.delete("/api/trips/:id", function(req, res) {
+    db.Trip.destroy({ where: { id: req.params.id } }).then(function(plannerdb) {
+      res.json(plannerdb);
     });
   });
 };
