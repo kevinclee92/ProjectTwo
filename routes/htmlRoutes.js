@@ -17,6 +17,9 @@ module.exports = function(app) {
   app.get("/login", function(req, res) {
     res.render("login");
   });
+  app.get("/trip", function(req, res) {
+    res.render("trip");
+  });
 
 
   // Load example page and pass in an example by id

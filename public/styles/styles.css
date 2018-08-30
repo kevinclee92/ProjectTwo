@@ -70,8 +70,9 @@ label {
 }
 .front-page {
   text-align: center;
-  color: darkblue;
+  color: purple;
   text-emphasis: bold;
+  font-family: 'Chango', cursive;
 
 }
 
@@ -159,14 +160,7 @@ label {
   height: 60px;
   width: 100%;
   text-align: center;
-<<<<<<< HEAD
-  text-emphasis: bold;
-}
-.getStarted {
-  background-color: darkblue;
-=======
   position: fixed;
->>>>>>> 8cb572d40433a2ca443b559b68afc34c4fbb7192
 }
 
 .copyright {
@@ -205,11 +199,4 @@ label {
   background-color: darkblue;
   border: darkblue;
 }
-<<<<<<< HEAD
-.homecopyright {
-  margin-top: 10px;
-  color: darkblue;
-}
-=======
 
->>>>>>> 8cb572d40433a2ca443b559b68afc34c4fbb7192
