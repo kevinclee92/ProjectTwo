@@ -79,6 +79,12 @@ label {
   display: inline;
   margin-bottom: 15px;
 }
+.front-page {
+  text-align: center;
+  color: darkblue;
+  text-emphasis: bold;
+
+}
 
 .searchForm {
   text-align: center;
@@ -193,6 +199,31 @@ label {
   z-index: -1;
 }
 
+#home {
+  position: relative;
+
+}
+.description {
+  text-emphasis: bold;
+}
+
+#home::after {
+  content: "";
+  background: url(../images/bg4.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: -1;
+}
+
+.footerArea {
+  height: 60px;
+
 .title {
   font-family: 'Fjalla One', sans-serif;
   font-weight: bold;
@@ -212,7 +243,11 @@ label {
   height: 60px;
   width: 100%;
   text-align: center;
-  
+  text-emphasis: bold;
+}
+.getStarted {
+  background-color: darkblue;
+  position: fixed;
 }
 
 .copyright {
@@ -250,5 +285,10 @@ label {
   margin-right: 20px;
   background-color: darkblue;
   border: darkblue;
+}
+
+.homecopyright {
+  margin-top: 10px;
+  color: darkblue;
 }
 
