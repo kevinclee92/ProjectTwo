@@ -1,3 +1,7 @@
+<div>
+    <br>
+    <h1>Login to your Account</h1>
+</div>
 <div class="logincontent">
     <div class="loginheading">
         Login
@@ -16,9 +20,7 @@
     <footer>
         <div class="foot-container">
             <div class="links" align="center">
-                <button class="btn btn-primary" type="submit">Home</button>
-                <button class="btn btn-primary" type="submit">Form</button>
-                <button class="btn btn-primary" type="submit">Contributors</button>
+
                 <br>
                 <br>
                 <br>
@@ -42,11 +44,16 @@
         width: 100%;
         height: 100%;
         font-family: "Helvetica Neue", Helvetica, sans-serif;
-        background: navy;
+        background: url(../images/bg1.jpeg);
+    }
+
+    h1 {
+        color: navy;
+        text-align: center;
     }
 
     .logincontent {
-        position: relative;
+        position: fixed;
         width: 350px;
         height: 300px;
         top: 50%;
@@ -55,20 +62,6 @@
         margin-left: -175px;
         background: #07A8C3;
         padding-top: 10px;
-    }
-
-    .logincontent::after {
-        content: "";
-        background: url(../public/images/bg1.jpeg);
-        background-size: cover;
-        background-attachment: fixed;
-        opacity: 0.5;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        position: absolute;
-        z-index: -1;
     }
 
     .loginheading {
