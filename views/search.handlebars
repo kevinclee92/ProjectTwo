@@ -1,36 +1,33 @@
-<div id="search">
+<section class="page" id="search">
     <div class="nav">
         <h2 class="logo">Smart Traveler</h2>
         <div class="navOptions">
             <a class="nav-link" href="#">SUBMISSIONS</a>
-            <a class="nav-link" href="#">SEARCH</a>
-            <a class="nav-link" href="#">FORMS</a>
-            <a class="nav-link" href="#">HOME</a>
+            <a class="nav-link" href="/search">SEARCH</a>
+            <a class="nav-link" href="/tripPlanning">FORMS</a>
+            <a class="nav-link" href="/">HOME</a>
         </div>
     </div>
-
     <br>
     <br>
     
+    <div class="page-content">
+      <div class="row">
+        <div class="searchForm">
+          <label class="searchLabel" for="searchInput">Search By City:&nbsp;&nbsp; </label>
+          <input class="form-control form-control-lg" id="searchInput" type="text">
+          <button type="submit" id="searchSubmit" class="btn btn-success">Search</button>
+        </div>
+      </div>
 
-    <div class="row">
-      <div class="col-md-8 offset-2 searchForm">
-        <label class="searchLabel" for="searchInput">Search By City:&nbsp;&nbsp; </label>
-        <input class="form-control form-control-lg" id="searchInput" type="text">
+      <div class="row">
+          <div id="searchResults"></div>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-md-8 offset-2">
-        <div id="searchResults"></div>
-      </div>
-    </div>
-    
-
-    <div class="footerArea"></div>
     
     <div class="footer">
         <p class="copyright">&copy; 2018 <i class="fas fa-dollar-sign"></i>mart Traveler</p>
     </div>
 
-</div>
+</section>
