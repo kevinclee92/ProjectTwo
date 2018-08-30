@@ -79,11 +79,12 @@ label {
   display: inline;
   margin-bottom: 15px;
 }
+
 .front-page {
   text-align: center;
-  color: darkblue;
-  text-emphasis: bold;
-
+  color: black;
+  font-weight: bold;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .searchForm {
@@ -199,10 +200,17 @@ label {
   z-index: -1;
 }
 
+
+.category {
+  margin-top: 20px;
+  font-weight: bolder;
+}
+
+
 #home {
   position: relative;
-
 }
+
 .description {
   text-emphasis: bold;
 }
@@ -223,6 +231,7 @@ label {
 
 .footerArea {
   height: 60px;
+}
 
 .title {
   font-family: 'Fjalla One', sans-serif;
@@ -247,7 +256,6 @@ label {
 }
 .getStarted {
   background-color: darkblue;
-  position: fixed;
 }
 
 .copyright {
@@ -264,8 +272,8 @@ label {
 }
 
 #plannedCost {
-  width: 50%;
   display: inline;
+  margin-top: 20px;
 }
 
 #expenseAdd {
@@ -289,6 +297,7 @@ label {
 
 .homecopyright {
   margin-top: 10px;
-  color: darkblue;
+  color: black;
+  font-weight: bold;
 }
 

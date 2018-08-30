@@ -38,7 +38,7 @@ var tripExample = function() {
 
       var $li = $("<li>")
         .attr({
-          class: "list-group-item",
+          class: "list-group-item resultItem",
           "data-id": example.id
         })
         .append($a);
@@ -51,6 +51,8 @@ var tripExample = function() {
 
       return $li;
     })
+    $("#tripExamples").append($examples);
+
   })
 }
 
@@ -69,3 +71,7 @@ var handleExpenseSubmit = function(event) {
 };
 
 $costSubmit.on("click", handleExpenseSubmit);
+
+$(document).ready(function() {
+  tripExample();
+})

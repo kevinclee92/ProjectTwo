@@ -22,3 +22,10 @@ module.exports = function(app) {
     });
   });
 };
+// app.get("/api/somethingsomething"), function(req, res) {
+//   db.Trip.findAll({ 
+//     city: $searchformvalue
+//   }).then(function(results){
+//     console.log('Tom went to malibu and spent $$')
+//   })
+// }
