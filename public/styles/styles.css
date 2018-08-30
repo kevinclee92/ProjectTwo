@@ -1,6 +1,5 @@
 html {
   width: 100%;
-  height: 100%;
 }
 
 .row {
@@ -10,6 +9,7 @@ html {
 
 .nav {
   width: 100%;
+  height: auto;
 }
 
 .nav-link {
@@ -17,6 +17,7 @@ html {
   font-weight: bolder;
   float: right;
   font-size: 20px;
+  text-decoration: underline;
 }
 
 .logo {
@@ -50,13 +51,23 @@ html {
 
 .expense {
   margin-top: 30px;
+  flex: 1;
+  margin: 30px;
+  margin-left: 50px;
+}
+
+.examples {
+  flex: 1;
+  margin: 30px;
+  margin-right: 50px;
 }
 
 .form {
-  border: solid darkblue 3px;
-  border-radius: 25px;
+
   margin-left: auto;
   margin-right: auto;
+  padding: 15px;
+  height: auto;
 }
 
 label {
@@ -67,6 +78,12 @@ label {
   width: 300px;
   display: inline;
   margin-bottom: 15px;
+}
+.front-page {
+  text-align: center;
+  color: darkblue;
+  text-emphasis: bold;
+
 }
 
 .searchForm {
@@ -94,7 +111,7 @@ label {
 
 #search::after {
   content: "";
-  background: url(../images/background.jpeg);
+  background: url(../images/bg2.jpeg);
   background-size: cover;
   background-attachment: fixed;
   opacity: 0.5;
@@ -103,8 +120,7 @@ label {
   bottom: 0;
   right: 0;
   position: fixed;
-  z-index: -1;
-  
+  z-index: -1; 
 }
 
 
@@ -122,8 +138,103 @@ label {
   z-index: -1;
 }
 
+.page-content {
+  min-height: calc(100vh - 57px);
+  display: flex;
+  justify-content: center;
+}
+
+.form-group {
+  height: auto;
+}
+#formResult {
+  position: relative;
+  height: auto;
+}
+
+#formResult::after {
+  content: "";
+  background: url(../images/form-result.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: -1;
+}
+
+.formResultArea {
+  width: 900px;
+  margin-top: 30px;
+}
+.graphArea {
+  
+  height: 500px;
+  flex: 2;
+}
+
+.budgetArea {
+  height: auto;
+  flex: 3;
+}
+
+#expenses {
+  position: relative;
+}
+
+#expenses::after {
+  content: "";
+  background: url(../images/form-result.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: -1;
+}
+
+#home {
+  position: relative;
+
+}
+.description {
+  text-emphasis: bold;
+}
+
+#home::after {
+  content: "";
+  background: url(../images/bg4.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: -1;
+}
+
 .footerArea {
   height: 60px;
+
+.title {
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: bold;
+}
+
+.contentFont {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+#budgetData {
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .footer {
@@ -132,9 +243,12 @@ label {
   height: 60px;
   width: 100%;
   text-align: center;
+  text-emphasis: bold;
+}
+.getStarted {
+  background-color: darkblue;
   position: fixed;
 }
-
 
 .copyright {
   margin-top: 10px;
@@ -142,10 +256,11 @@ label {
 }
 
 #tripExamples {
-  height: 200px;
+  height: auto;
   width: 100%;
   border: solid darkblue 3px;
   border-radius: 25px;
+  
 }
 
 #plannedCost {
@@ -168,8 +283,12 @@ label {
   margin-top: 15px;
   margin-bottom: 15px;
   margin-right: 20px;
-  float: right;
   background-color: darkblue;
   border: darkblue;
+}
+
+.homecopyright {
+  margin-top: 10px;
+  color: darkblue;
 }
 
