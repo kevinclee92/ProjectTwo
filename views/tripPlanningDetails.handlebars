@@ -19,7 +19,7 @@
             <div id="tripExamples">
                 {{#each examples}}
                 <li data-id="{{this.id}}" class="list-group-item">
-                    <a href="example/{{this.id}}">{{this.name}}</a>
+                    <a href="example/{{this.id}}">{{this.name}} {{this.city}}</a>
                     <button class="btn btn-danger float-right delete">ｘ</button>
                 </li>
                 {{/each}}
