@@ -3,9 +3,9 @@
         <h2 class="logo">Smart Traveler</h2>
         <div class="navOptions">
             <a class="nav-link" href="#">SUBMISSIONS</a>
-            <a class="nav-link" href="#">SEARCH</a>
-            <a class="nav-link" href="#">FORMS</a>
-            <a class="nav-link" href="#">HOME</a>
+            <a class="nav-link" href="/search">SEARCH</a>
+            <a class="nav-link" href="/tripPlanning">FORMS</a>
+            <a class="nav-link" href="/">HOME</a>
         </div>
     </div>
 
@@ -14,9 +14,9 @@
     <div class="page-content">
         <div class="row plan">
             <div class="form">
-                <h3>Enter basic information about your trip!</h3>
+                <h1 class="title">Start your budget plan for your trip.</h1>
                 <br>
-                <form id="planForm">
+                <form id="planForm" class="contentFont">
                     <div class="form-group">
                         <label for="nameInput">Your Name:&nbsp;&nbsp; </label>
                         <input class="form-control form-control-lg" id="nameInput" type="text">
@@ -29,8 +29,8 @@
                         <br>
                         <label for="endDate">End Date:&nbsp;&nbsp;</label>
                         <input type="Date" class="form-control" id="endDate" placeholder="xx/xx/xxxx">
-                        <br>
-                        <button type="submit" id="planFormSubmit" class="btn btn-success">Next Page</button>
+                        <hr>
+                        <a class="btn btn-primary" id="planFormSubmit" href="/tripPlanningDetails" role="button">Next Page</a>
                     </div>
                 </form>
             </div>
