@@ -16,7 +16,7 @@ module.exports = function(app) {
   });
 
   // app.get for city based search
-  app.get("/api/")
+  // app.get("/api/")
   // Delete an example by id
   app.delete("/api/examples/:id", function(req, res) {
     db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
@@ -24,3 +24,10 @@ module.exports = function(app) {
     });
   });
 };
+// app.get("/api/somethingsomething"), function(req, res) {
+//   db.Trip.findAll({ 
+//     city: $searchformvalue
+//   }).then(function(results){
+//     console.log('Tom went to malibu and spent $$')
+//   })
+// }
