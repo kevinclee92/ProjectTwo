@@ -233,7 +233,7 @@ label {
 
 #home::after {
   content: "";
-  background: url(../images/bg4.jpeg);
+  background: url(../images/bg5.jpg);
   background-size: cover;
   background-attachment: fixed;
   opacity: 0.5;
