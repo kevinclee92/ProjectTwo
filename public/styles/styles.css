@@ -129,7 +129,7 @@ label {
 
 #submission::after {
   content: "";
-  background: url(../images/bg2.jpeg);
+  background: url(../images/bg6.jpeg);
   background-size: cover;
   background-attachment: fixed;
   opacity: 0.5;
@@ -273,8 +273,16 @@ label {
 }
 .getStarted {
   background-color: darkblue;
+}
 
+#startOverButton {
+  background-color: red;
+  border: red;
+}
 
+#budgetFinishButton {
+  background-color: green;
+  border: green;
 }
 
 .copyright {
@@ -316,7 +324,6 @@ label {
 
 .homecopyright {
   margin-top: 10px;
-  color: black;
-  font-weight: bold;
+  color: whitesmoke;
 }
 
