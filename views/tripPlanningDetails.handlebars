@@ -4,29 +4,22 @@
         <h2 class="logo">Smart Traveler</h2>
         <div class="navOptions">
             <a class="nav-link" href="#">SUBMISSIONS</a>
-            <a class="nav-link" href="#">SEARCH</a>
-            <a class="nav-link" href="#">FORMS</a>
-            <a class="nav-link" href="#">HOME</a>
+            <a class="nav-link" href="/search">SEARCH</a>
+            <a class="nav-link" href="/tripPlanning">FORMS</a>
+            <a class="nav-link" href="/">HOME</a>
         </div>
     </div>
 
     <br>
     <br>
 
-    <div class="row">
-        <div class="col-md-8 offset-md-2">
-            <h2>Here are some trips our users submitted!</h2>
-            <div id="tripExamples"></div>
-        </div>
-    </div>
+    <div class="page-content">
 
-    <div class="row expense">
-        <div class="col-md-8 offset-md-2">
-            <hr>
-            <h2>Next, Plan Your Expenses!</h2>
+        <div class="expense">
+            <h2 class="title">&nbsp;Next, Plan Your Expenses!</h2>
             <br>
             <form id="expenseForm">
-                <div class="form-group">
+                <div class="form-group contentFont">
                     <label for="plannedCost">How much money are you planning to spend on 
                         <select id="expenseSelect">
                             <option id="food" value="food">food</option>
@@ -35,19 +28,27 @@
                             <option id="other" value="other">other</option>
                         </select>    
                     ?</label>
-                    <input class="form-control form-control-sm" id="plannedCost" type="text" placeholder="$">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input class="form-control form-control-sm" id="plannedCost" type="text" placeholder="0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <button type="submit" id="expenseAdd" class="btn btn-success">ADD</button>
                     <br>
                 </div>
-                <div id="plannedExpenses"></div>
+                <div id="plannedExpenses">
+                    
+                </div>
                 <hr>
                 <button type="submit" id="expenseFormSubmit" class="btn btn-success">Submit Form!</button>
             </form>
-            
         </div>
-    </div>
 
-    <div class="footerArea"></div>
+        <div class="examples">
+                <h2 class="title">&nbsp;Some Examples...</h2>
+                <div id="tripExamples">
+                    
+                </div>
+        </div>
+
+    </div>
+    
     <div class="footer">
         <p class="copyright">&copy; 2018 <i class="fas fa-dollar-sign"></i>mart Traveler</p>
     </div>
