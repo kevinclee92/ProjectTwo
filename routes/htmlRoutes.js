@@ -14,12 +14,21 @@ module.exports = function(app) {
   app.get("/search", function(req, res) {
     res.render("search");
   });
+
+  app.get("/login", function(req, res) {
+    res.render("login");
+  });
+
   app.get("/formResult", function(req, res) {
     res.render("formResult");
   });
   app.get("/tripExpenses", function(req, res) {
     res.render("tripExpenses");
   });
+  app.get("/submission", function(req, res) {
+    res.render("trip");
+  })
+
 
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {

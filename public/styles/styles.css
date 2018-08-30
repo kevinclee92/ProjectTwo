@@ -80,6 +80,13 @@ label {
   margin-bottom: 15px;
 }
 
+.front-page {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-family: 'Noto Sans', sans-serif;
+}
+
 .searchForm {
   text-align: center;
 }
@@ -193,9 +200,37 @@ label {
   z-index: -1;
 }
 
+
 .category {
   margin-top: 20px;
   font-weight: bolder;
+}
+
+
+#home {
+  position: relative;
+}
+
+.description {
+  text-emphasis: bold;
+}
+
+#home::after {
+  content: "";
+  background: url(../images/bg4.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: -1;
+}
+
+.footerArea {
+  height: 60px;
 }
 
 .title {
@@ -217,7 +252,10 @@ label {
   height: 60px;
   width: 100%;
   text-align: center;
-  
+  text-emphasis: bold;
+}
+.getStarted {
+  background-color: darkblue;
 }
 
 .copyright {
@@ -255,5 +293,11 @@ label {
   margin-right: 20px;
   background-color: darkblue;
   border: darkblue;
+}
+
+.homecopyright {
+  margin-top: 10px;
+  color: black;
+  font-weight: bold;
 }
 
