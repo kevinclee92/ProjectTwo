@@ -15,6 +15,16 @@ module.exports = function(app) {
     res.render("search");
   });
 
+  app.get("/login", function(req, res) {
+    res.render("login");
+  });
+
+  app.get("/formResult", function(req, res) {
+    res.render("formResult");
+  });
+  app.get("/tripExpenses", function(req, res) {
+    res.render("tripExpenses");
+  });
 
 
   // Load example page and pass in an example by id
