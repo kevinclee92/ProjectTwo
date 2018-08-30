@@ -16,7 +16,14 @@
     <div class="row">
         <div class="col-md-8 offset-md-2">
             <h2>Here are some trips our users submitted!</h2>
-            <div id="tripExamples"></div>
+            <div id="tripExamples">
+                {{#each examples}}
+                <li data-id="{{this.id}}" class="list-group-item">
+                    <a href="example/{{this.id}}">{{this.name}}</a>
+                    <button class="btn btn-danger float-right delete">ｘ</button>
+                </li>
+                {{/each}}
+            </div>
         </div>
     </div>
 
@@ -27,14 +34,14 @@
             <br>
             <form id="expenseForm">
                 <div class="form-group">
-                    <label for="plannedCost">How much money are you planning to spend on 
+                    <label for="plannedCost">How much money are you planning to spend on
                         <select id="expenseSelect">
                             <option id="food" value="food">food</option>
                             <option id="transit" value="transit">transit</option>
                             <option id="lodging" value="lodging">lodging</option>
                             <option id="other" value="other">other</option>
-                        </select>    
-                    ?</label>
+                        </select>
+                        ?</label>
                     <input class="form-control form-control-sm" id="plannedCost" type="text" placeholder="$">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <button type="submit" id="expenseAdd" class="btn btn-success">ADD</button>
                     <br>
@@ -43,7 +50,7 @@
                 <hr>
                 <button type="submit" id="expenseFormSubmit" class="btn btn-success">Submit Form!</button>
             </form>
-            
+
         </div>
     </div>
 
