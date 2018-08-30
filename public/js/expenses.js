@@ -16,8 +16,44 @@ var expenseAPI = {
       url: "/api/tripExpenses",
       data: JSON.stringify(expenses)
     });
+  },
+  getUserExamples: function() {
+    return $.ajax({
+      headers: {
+        "Content-Type": "application/json"
+      },
+      url: "/api/tripPlanning",
+      type: "GET"
+    });
   }
 };
+
+// appending data to #tripExamples
+var tripExample = function() {
+  expenseAPI.getUserExamples().then(function(data) {
+    var $examples = data.map(function(example) {
+      var $a = $("<a>")
+        .text(`${example.name}, ${example.city}`)
+        .attr("href", "/tripPlanning/" + example.id);
+
+      var $li = $("<li>")
+        .attr({
+          class: "list-group-item",
+          "data-id": example.id
+        })
+        .append($a);
+
+      var $button = $("<button>")
+        .addClass("btn btn-danger float-right delete")
+        .text("ｘ");
+
+      $li.append($button);
+
+      return $li;
+    })
+  })
+}
+
 var handleExpenseSubmit = function(event) {
   event.preventDefault();
   var expenseData = {
