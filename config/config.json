@@ -9,7 +9,7 @@
   "test": {
     "username": "root",
     "password": null,
-    "database": "testdb",
+    "database": "plannerdb",
     "host": "localhost",
     "dialect": "mysql",
     "logging": false

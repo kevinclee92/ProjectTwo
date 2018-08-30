@@ -14,11 +14,19 @@ module.exports = function(app) {
   app.get("/search", function(req, res) {
     res.render("search");
   });
+
   app.get("/login", function(req, res) {
     res.render("login");
   });
   app.get("/trip", function(req, res) {
     res.render("trip");
+  });
+
+  app.get("/formResult", function(req, res) {
+    res.render("formResult");
+  });
+  app.get("/tripExpenses", function(req, res) {
+    res.render("tripExpenses");
   });
 
 
