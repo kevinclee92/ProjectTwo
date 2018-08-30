@@ -82,16 +82,9 @@ label {
 
 .front-page {
   text-align: center;
-<<<<<<< HEAD
-  color: purple;
-  text-emphasis: bold;
-  font-family: 'Chango', cursive;
-
-=======
   color: black;
   font-weight: bold;
   font-family: 'Noto Sans', sans-serif;
->>>>>>> 40ebde0a4e8e76c3412a07e49e70c68631988f89
 }
 
 .searchForm {
@@ -275,17 +268,13 @@ label {
   height: 60px;
   width: 100%;
   text-align: center;
-<<<<<<< HEAD
-=======
-  text-emphasis: bold;
+
+ 
 }
 .getStarted {
   background-color: darkblue;
-<<<<<<< HEAD
->>>>>>> 628de897fd5136581fa39307fb289230896173b5
-  position: fixed;
-=======
->>>>>>> 40ebde0a4e8e76c3412a07e49e70c68631988f89
+
+
 }
 
 .copyright {
@@ -324,13 +313,10 @@ label {
   background-color: darkblue;
   border: darkblue;
 }
-<<<<<<< HEAD
-=======
 
 .homecopyright {
   margin-top: 10px;
   color: black;
   font-weight: bold;
 }
->>>>>>> 628de897fd5136581fa39307fb289230896173b5
 
