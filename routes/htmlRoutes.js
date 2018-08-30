@@ -25,6 +25,9 @@ module.exports = function(app) {
   app.get("/tripExpenses", function(req, res) {
     res.render("tripExpenses");
   });
+  app.get("/submission", function(req, res) {
+    res.render("trip");
+  })
 
 
   // Load example page and pass in an example by id

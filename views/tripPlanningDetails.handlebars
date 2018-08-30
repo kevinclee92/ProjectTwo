@@ -23,17 +23,18 @@
             <form id="expenseForm">
 
                 <div class="form-group contentFont">
-                    <label for="plannedCost">How much money are you planning to spend on
-                        <select id="expenseSelect">
-                            <option id="food" value="food">food</option>
-                            <option id="transit" value="transit">transit</option>
-                            <option id="lodging" value="lodging">lodging</option>
-                            <option id="other" value="other">other</option>
-                        </select>    
-                    ?</label>
-                    <input class="form-control form-control-sm" id="plannedCost" type="text" placeholder="0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <button type="submit" id="expenseAdd" class="btn btn-success">ADD</button>
+                    <label for="plannedCost">Input your planned spendings by category. (no $ signs)</label>
                     <br>
+                    <h6 class="category"><i class="fas fa-utensils"></i>&nbsp;Food:&nbsp;&nbsp;</h6>
+                    <input class="form-control form-control-sm" id="plannedCost food" type="text" placeholder="$0">
+                    <h6 class="category"><i class="fas fa-hotel"></i>&nbsp;Lodging:&nbsp;&nbsp;</h6>
+                    <input class="form-control form-control-sm" id="plannedCost lodging" type="text" placeholder="$0">
+                    <h6 class="category"><i class="fas fa-plane-departure"></i>&nbsp;Airfare:&nbsp;&nbsp;</h6>
+                    <input class="form-control form-control-sm" id="plannedCost airfare" type="text" placeholder="$0">
+                    <h6 class="category"><i class="fas fa-taxi"></i>&nbsp;Transportation:&nbsp;</h6>
+                    <input class="form-control form-control-sm" id="plannedCost transportation" type="text" placeholder="$0">
+                    <h6 class="category"><i class="fas fa-money-bill-alt"></i>&nbsp;Misc:&nbsp;&nbsp;</h6>
+                    <input class="form-control form-control-sm" id="plannedCost misc" type="text" placeholder="$0">
                 </div>
                 <div id="plannedExpenses">
                     
