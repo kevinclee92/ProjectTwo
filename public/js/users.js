@@ -2,6 +2,7 @@ var $userName = $("#nameInput");
 var $userCity = $("#cityInput");
 var $userStart = $("#startDate");
 var $userEnd = $("#endDate");
+var $initialBudget = $("#budgetInput");
 var $submitBtn = $("#planFormSubmit");
 
 // userAPI object for methods
@@ -29,7 +30,8 @@ var handleUserSubmit = function(event) {
     name: $userName.val().trim(),
     city: $userCity.val().trim(),
     startDate: $userStart.val().trim(),
-    endDate: $userEnd.val().trim()
+    endDate: $userEnd.val().trim(),
+    initialBudget: $initialBudget.val().trim()
     //if using Google autocomplete we wont need country
   };
   console.log(users);

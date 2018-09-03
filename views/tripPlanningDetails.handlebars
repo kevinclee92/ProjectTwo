@@ -26,15 +26,15 @@
                     <label for="plannedCost">Input your planned spendings by category. (no $ signs)</label>
                     <br>
                     <h6 class="category"><i class="fas fa-utensils"></i>&nbsp;Food:&nbsp;&nbsp;</h6>
-                    <input class="form-control form-control-sm" id="plannedCost food" type="text" placeholder="$0">
+                    <input class="form-control form-control-sm plannedCost" id="food" type="text" placeholder="$0">
                     <h6 class="category"><i class="fas fa-hotel"></i>&nbsp;Lodging:&nbsp;&nbsp;</h6>
-                    <input class="form-control form-control-sm" id="plannedCost lodging" type="text" placeholder="$0">
+                    <input class="form-control form-control-sm plannedCost" id="lodging" type="text" placeholder="$0">
                     <h6 class="category"><i class="fas fa-plane-departure"></i>&nbsp;Airfare:&nbsp;&nbsp;</h6>
-                    <input class="form-control form-control-sm" id="plannedCost airfare" type="text" placeholder="$0">
+                    <input class="form-control form-control-sm plannedCost" id="airfare" type="text" placeholder="$0">
                     <h6 class="category"><i class="fas fa-taxi"></i>&nbsp;Transportation:&nbsp;</h6>
-                    <input class="form-control form-control-sm" id="plannedCost transportation" type="text" placeholder="$0">
+                    <input class="form-control form-control-sm plannedCost" id="transportation" type="text" placeholder="$0">
                     <h6 class="category"><i class="fas fa-money-bill-alt"></i>&nbsp;Misc:&nbsp;&nbsp;</h6>
-                    <input class="form-control form-control-sm" id="plannedCost misc" type="text" placeholder="$0">
+                    <input class="form-control form-control-sm plannedCost" id="misc" type="text" placeholder="$0">
                 </div>
                 <div id="plannedExpenses">
 
@@ -48,7 +48,12 @@
             <h2 class="title">&nbsp;Some Examples...</h2>
             <div id="tripExamples2">
                 <ul id="tripExamples" class="list-group">
-                    
+                    {{#each examples}}
+                    <li data-id="{{this.id}}" class="list-group-item">
+                        <a href="tripPlanning/{{this.id}}">{{this.name}} Budget:{{this.initialBudget}} Start Date: {{this.startDate}} End Date: {{this.endDate}} Destination: {{this.city}}</a>
+                        <button class="btn btn-danger float-right delete">ｘ</button>
+                    </li>
+                    {{/each}}
                 </ul>
             </div>
         </div>
