@@ -20,14 +20,7 @@ module.exports = function(app) {
   });
 
   app.get("/submission", function(req, res) {
-    db.Trip.findAll({}).then(function(tripData) {
-      db.Expense.findAll({}).then(function(expenseData) {
-        res.render("submission", {
-          entryOne: tripData,
-          entryTwo: expenseData
-        });
-      })
-    });
+    res.render("submission");
   });
 
   app.get("/formResult", function(req, res) {

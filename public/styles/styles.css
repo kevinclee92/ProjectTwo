@@ -88,6 +88,7 @@ label {
 
 .searchForm {
   text-align: center;
+  height: auto;
 }
 
 #searchLabel {
@@ -99,10 +100,6 @@ label {
   background-size: cover;
 }
 
-#searchResults {
-  margin-top: 50px;
-  
-}
 
 #searchInput {
   display: inline;
