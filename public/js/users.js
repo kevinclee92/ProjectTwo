@@ -37,8 +37,6 @@ var handleUserSubmit = function(event) {
   console.log(users);
 
   userAPI.saveUsers(users);
-  // add promise function
-  // userAPI.saveUsers(users);
 };
 
 $submitBtn.on("click", handleUserSubmit);

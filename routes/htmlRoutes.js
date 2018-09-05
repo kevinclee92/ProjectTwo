@@ -24,19 +24,10 @@ module.exports = function(app) {
   });
 
   app.get("/formResult", function(req, res) {
-    res.render("formResult");
+    res.render("formResult"); 
   });
   app.get("/tripExpenses", function(req, res) {
     res.render("tripExpenses");
-  });
-
-  // Load example page and pass in an example by id
-  app.get("/tripPlanning/:id", function(req, res) {
-    db.Trip.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("example", {
-        example: dbExample
-      });
-    });
   });
 
   // Render 404 page for any unmatched routes
