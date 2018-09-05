@@ -328,12 +328,13 @@ label {
 #entriesArea {
   display: flex;
   flex-wrap: wrap;
+  height: auto;
+  justify-content: center;
 }
 
 .resultCard {
-  flex: 1;
-  height: 300px;
   width: 400px;
+  height: 300px;
   margin: 10px;
   border: darkblue solid 3px;
 }

@@ -18,20 +18,21 @@ $(document).ready(function() {
 
     var results = [];
 
-    for (var i = 0; i < dataOne.length; i++) {
-      let tripId = dataOne[i].id;
+    for (var i = 0; i < dataTwo.length; i++) {
+      let id = dataTwo[i].TripId;
+      
 
-      for (var j = 0; j < dataTwo.length; j++) {
-        if (dataTwo[j].TripId === tripId) {
+      for (var j = 0; j < dataOne.length; j++) {
+        if (dataOne[j].id === id) {
 
           var $result = $(
             [
               '<div class="card resultCard">',
-              '<h5 class="card-header center contentFont" style="font-weight: bold;">' + dataOne[i].city + '</h5>',
-              '<h5 class="card-header contentFont center">' + dataOne[i].startDate + '&nbsp; ~ &nbsp;' + dataOne[i].endDate + '</h5>',
+              '<h5 class="card-header center contentFont" style="font-weight: bold;">' + dataOne[j].city + '</h5>',
+              '<h5 class="card-header contentFont center">' + dataOne[j].startDate + '&nbsp; ~ &nbsp;' + dataOne[j].endDate + '</h5>',
               '<div class="card-body">',
-              '<h5 class="card-title center contentFont"> Budget: <strong style="color: green;">$' + dataOne[i].initialBudget + '</strong></h5>',
-              '<ul class="contentFont">' + '<li>Lodging:  $' + dataTwo[j].dailyHotelExpense + '</li>' + '<li>Food:  $' + dataTwo[j].dailyMealExpense + '</li>' + '<li>Airfare:  $' + dataTwo[j].airfareExpense + '</li>' + '<li>Transportation:  $' + dataTwo[j].transportationExpense + '</li>' + '<li>Miscellaneous Costs:  $' + dataTwo[j].miscExpense + '</li>' + '</ul>',
+              '<h5 class="card-title center contentFont"> Budget: <strong style="color: green;">$' + dataOne[j].initialBudget + '</strong></h5>',
+              '<ul class="contentFont">' + '<li>Lodging:  $' + dataTwo[i].dailyHotelExpense + '</li>' + '<li>Food:  $' + dataTwo[i].dailyMealExpense + '</li>' + '<li>Airfare:  $' + dataTwo[i].airfareExpense + '</li>' + '<li>Transportation:  $' + dataTwo[i].transportationExpense + '</li>' + '<li>Miscellaneous Costs:  $' + dataTwo[i].miscExpense + '</li>' + '</ul>',
               '</div>',
               '</div>'
             ].join("")
