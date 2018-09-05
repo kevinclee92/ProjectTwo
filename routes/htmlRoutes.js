@@ -18,8 +18,16 @@ module.exports = function(app) {
   app.get("/login", function(req, res) {
     res.render("login");
   });
+
   app.get("/submission", function(req, res) {
-    res.render("submission");
+    db.Trip.findAll({}).then(function(tripData) {
+      db.Expense.findAll({}).then(function(expenseData) {
+        res.render("submission", {
+          entryOne: tripData,
+          entryTwo: expenseData
+        });
+      })
+    });
   });
 
   app.get("/formResult", function(req, res) {
