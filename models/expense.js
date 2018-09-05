@@ -14,7 +14,6 @@ module.exports = function(sequelize, DataTypes) {
       foreignKey: {
         allowNull: false
       }
-      // targetKey: "id"
     });
   };
   return Expense;
