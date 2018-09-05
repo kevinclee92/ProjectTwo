@@ -17,7 +17,7 @@
             <div class="form">
                 <h1 class="title">Start your budget plan for your trip.</h1>
                 <br>
-                <form id="planForm" class="contentFont">
+                <form id="planForm" class="contentFont" action="/tripPlanningDetails.handlebars">
                     <div class="form-group">
                         <label for="nameInput">Your Name:&nbsp;&nbsp; </label>
                         <input class="form-control form-control-lg" id="nameInput" type="text">
@@ -34,7 +34,7 @@
                         <label for="budgetInput">Total Budget (no $ sign):&nbsp;&nbsp;  </label>
                         <input class="form-control form-control-lg" id="budgetInput" type="text" placeholder="$0">
                         <hr>
-                        <button id="planFormSubmit" class="btn btn-primary">Submit</button>
+                        <button type="submit" id="planFormSubmit" class="btn btn-primary">Submit</button>
                         <a class="btn btn-primary" href="/tripPlanningDetails" role="button">Next Page</a>
                     </div>
                 </form>
