@@ -23,7 +23,7 @@ var cityAPI = {
       type: "GET"
     });
   }
-  // grab budget info with GET ajax call
+  
 };
 
 // grabbing user info for header information
@@ -34,14 +34,14 @@ var userResults = function() {
     // grabbing the user filtered data and using the id to grab expense info
     console.log(userData);
     // nest everything in a for loop 
-    for(var i = 0; i < userData.length; i++) {
+    for(let i = 0; i < userData.length; i++) {
       var userId = userData[i].id;
       var userItem = userData[i];
       //grabbing the information for expense data
       cityAPI.grabExpenses(userId).then(function(expenseData) {
         // grabbing all the expense data for the filtered users and spitting them out to DOM
         // test to grab individual values
-        console.log(expenseData[i].dailyHotelExpense);
+        console.log(expenseData[i]);
         //structuring card items
         var $div = $("<div>");
         // card class
@@ -91,6 +91,7 @@ var userResults = function() {
 
         //adding into the section
         $("#accordion").append($card);
+
       });
     }
     
@@ -100,9 +101,10 @@ var userResults = function() {
 };
 
 $("#searchSubmit").on("click", function() {
+
+  $("#accordion").empty();
   $searchCity = $("#searchInput")
   .val()
   .trim();
-  $("#accordion").empty();
   userResults();
 });
