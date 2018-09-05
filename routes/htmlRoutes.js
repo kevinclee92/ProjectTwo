@@ -26,7 +26,7 @@ module.exports = function(app) {
           entryOne: tripData,
           entryTwo: expenseData
         });
-      })
+      });
     });
   });
 
@@ -38,13 +38,13 @@ module.exports = function(app) {
   });
 
   // Load example page and pass in an example by id
-  app.get("/tripPlanning/:id", function(req, res) {
-    db.Trip.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("example", {
-        example: dbExample
-      });
-    });
-  });
+  // app.get("/tripPlanning/:id", function(req, res) {
+  //   db.Trip.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
+  //     res.render("example", {
+  //       example: dbExample
+  //     });
+  //   });
+  // });
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
