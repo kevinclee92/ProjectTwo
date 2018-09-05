@@ -325,3 +325,19 @@ label {
   color: whitesmoke;
 }
 
+#entriesArea {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.resultCard {
+  flex: 1;
+  height: 300px;
+  width: 400px;
+  margin: 10px;
+  border: darkblue solid 3px;
+}
+
+.center {
+  text-align: center;
+}
