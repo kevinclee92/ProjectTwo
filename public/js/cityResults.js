@@ -47,7 +47,7 @@ var userResults = function() {
         // card class
         var $card = $div.addClass("card");
         var $cardHead = $("<div>").attr({
-          class: "card-header",
+          class: "card-header citySearchTitle",
           id: `heading${i}`});
         var $h5 = $("<h5>").attr("class", "mb-0");
         // adding bootstrap attr and user data into button
@@ -57,9 +57,9 @@ var userResults = function() {
           "data-target" : `#collapse${i}`,
           "aria-expanded" : "false",
           "aria-controls" : `collapse${i}`
-        }).text(`${userItem.name}  ||  $${userItem.initialBudget}  ||  Duration ${userItem.startDate} - ${userItem.endDate}`);
+        }).html(`<h2 class="cityResult">User: <span style="color: darkblue;">${userItem.name}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Budget: <span style="color: green;">$${userItem.initialBudget}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Duration: <span style="color: purple;">${userItem.startDate} ~ ${userItem.endDate}</span></h2>`);
         // creating the div for the content of accordion
-        var $cardBodyDiv = $("<div>").attr({
+        var $cardBodyDiv = $("<div style='text-align: center;'>").attr({
           id: `collapse${i}`,
           class: "collapse",
           "aria-labelledby": `heading${i}`,
@@ -67,12 +67,12 @@ var userResults = function() {
         });
         var $bodyDiv = $("<div>").addClass("card-body");
         $bodyDiv.append(`
-          <ul class= "userExpense">
-            <li>Lodging: ${expenseData[i].dailyHotelExpense}</li>
-            <li>Food: ${expenseData[i].dailyMealExpense}</li>
-            <li>Airfare: ${expenseData[i].airfareExpense}</li>
-            <li>Transportation: ${expenseData[i].transportationExpense}</li>
-            <li>Miscellaneous Costs: ${expenseData[i].miscExpense}</li>
+          <div class= "userExpense">
+            <h5>Lodging: <span style="color: green;">$${expenseData[i].dailyHotelExpense}</span></h5>
+            <h5>Food: <span style="color: green;">$${expenseData[i].dailyMealExpense}</span></h5>
+            <h5>Airfare: <span style="color: green;">$${expenseData[i].airfareExpense}</span></h5>
+            <h5>Transportation: <span style="color: green;">$${expenseData[i].transportationExpense}</span></h5>
+            <h5>Miscellaneous Costs: <span style="color: green;">$${expenseData[i].miscExpense}</span></h5>
         `)
         // piecing together the appends
         // appending button to h5 element

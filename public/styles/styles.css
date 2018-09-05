@@ -84,10 +84,12 @@ label {
   color: black;
   font-weight: bold;
   font-family: 'Noto Sans', sans-serif;
+  margin-top: 30px;
 }
 
 .searchForm {
   text-align: center;
+  height: auto;
 }
 
 #searchLabel {
@@ -99,10 +101,6 @@ label {
   background-size: cover;
 }
 
-#searchResults {
-  margin-top: 50px;
-  
-}
 
 #searchInput {
   display: inline;
@@ -341,4 +339,38 @@ label {
 
 .center {
   text-align: center;
+}
+
+.search-page {
+  flex-direction: column;
+  justify-content: start;
+}
+
+#searchResults {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+.searchTitle {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.cityResult {
+  font-family: 'Noto Sans', sans-serif;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.allEntriesTitle {
+  margin-top: 50px;
+  text-align: center;
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-decoration: underline;
 }

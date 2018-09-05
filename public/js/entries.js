@@ -27,7 +27,7 @@ $(document).ready(function() {
               '<h5 class="card-header center contentFont" style="font-weight: bold;">' +
                 dataOne[j].city +
                 "</h5>",
-              '<h5 class="card-header contentFont center">' +
+              '<h5 class="contentFont center" style="margin-top: 10px;">' +
                 dataOne[j].startDate +
                 "&nbsp; ~ &nbsp;" +
                 dataOne[j].endDate +
@@ -37,21 +37,21 @@ $(document).ready(function() {
                 dataOne[j].initialBudget +
                 "</strong></h5>",
               '<ul class="contentFont">' +
-                "<li>Lodging:  $" +
+                "<li>Lodging:  <strong>$" +
                 dataTwo[i].dailyHotelExpense +
-                "</li>" +
-                "<li>Food:  $" +
+                "</strong></li>" +
+                "<li>Food:  <strong>$" +
                 dataTwo[i].dailyMealExpense +
-                "</li>" +
-                "<li>Airfare:  $" +
+                "</strong></li>" +
+                "<li>Airfare:  <strong>$" +
                 dataTwo[i].airfareExpense +
-                "</li>" +
-                "<li>Transportation:  $" +
+                "</strong></li>" +
+                "<li>Transportation:  <strong>$" +
                 dataTwo[i].transportationExpense +
-                "</li>" +
-                "<li>Miscellaneous Costs:  $" +
+                "</strong></li>" +
+                "<li>Miscellaneous Costs:  <strong>$" +
                 dataTwo[i].miscExpense +
-                "</li>" +
+                "</strong></li>" +
                 "</ul>",
               "</div>",
               "</div>"
