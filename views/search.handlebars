@@ -12,26 +12,23 @@
     <br>
 
     <div class="page-content search-page">
-        
-            
-                <div class="searchForm">
-                    <label class="searchLabel" for="searchInput">Search By City:&nbsp;&nbsp; </label>
-                    <input class="form-control form-control-lg" id="searchInput" style="width: 300px;" type="text">
-                    <button type="submit" id="searchSubmit" class="btn btn-success">Search</button>
-                </div>
-            
-        
 
-        
-           
-                <div id="searchResults">
-                    {{!-- accordion for user expense data --}}
-                    <div id="accordion">
+      <div class="searchTitle">
+        <h2 class="title">Search submissions by city! Click on each results to see details.</h2>
+      </div>
 
-                    </div>
-                </div>
-           
-        
+      <div class="searchForm">
+          <input class="form-control form-control-lg" id="searchInput" style="width: 300px;" type="text">
+          <button type="submit" id="searchSubmit" class="btn btn-success">Search</button>
+      </div>
+  
+      <div id="searchResults">
+          {{!-- accordion for user expense data --}}
+          <div id="accordion">
+
+          </div>
+      </div>
+
     </div>
 
 
