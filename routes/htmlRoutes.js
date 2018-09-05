@@ -28,8 +28,6 @@ module.exports = function(app) {
   app.get("/tripExpenses", function(req, res) {
     res.render("tripExpenses");
   });
- 
-
 
   // Load example page and pass in an example by id
   app.get("/tripPlanning/:id", function(req, res) {

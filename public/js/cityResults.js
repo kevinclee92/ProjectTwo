@@ -34,7 +34,7 @@ var userResults = function() {
     // grabbing the user filtered data and using the id to grab expense info
     console.log(userData);
     // nest everything in a for loop 
-    for(let i = 0; i < userData.length; i++) {
+    for(var i = 0; i < userData.length; i++) {
       var userId = userData[i].id;
       var userItem = userData[i];
       //grabbing the information for expense data
