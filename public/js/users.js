@@ -36,7 +36,7 @@ var handleUserSubmit = function(event) {
   };
   console.log(users);
 
-  userAPI.saveUsers(users);
+  userAPI.saveUsers(users).then(window.location.href = "/tripPlanningDetails");
 };
 
 $submitBtn.on("click", handleUserSubmit);

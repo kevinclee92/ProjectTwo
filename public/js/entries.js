@@ -33,26 +33,26 @@ $(document).ready(function() {
                 dataOne[j].endDate +
                 "</h5>",
               '<div class="card-body">',
-              '<h5 class="card-title center contentFont"> Budget: <strong style="color: green;">$' +
+              '<h5 class="card-title contentFont" style="font-weight: bold"> Budget: <strong style="color: green;">$' +
                 dataOne[j].initialBudget +
                 "</strong></h5>",
-              '<ul class="contentFont">' +
-                "<li>Lodging:  <strong>$" +
+              '<div class="contentFont">' +
+                "<h6 style='font-size: 16px;'>Lodging:  <strong>$" +
                 dataTwo[i].dailyHotelExpense +
-                "</strong></li>" +
-                "<li>Food:  <strong>$" +
+                "</strong></h6>" +
+                "<h6 style='font-size: 16px;'>Food:  <strong>$" +
                 dataTwo[i].dailyMealExpense +
-                "</strong></li>" +
-                "<li>Airfare:  <strong>$" +
+                "</strong></h6>" +
+                "<h6 style='font-size: 16px;'>Airfare:  <strong>$" +
                 dataTwo[i].airfareExpense +
-                "</strong></li>" +
-                "<li>Transportation:  <strong>$" +
+                "</strong></h6>" +
+                "<h6 style='font-size: 16px;'>Transportation:  <strong>$" +
                 dataTwo[i].transportationExpense +
-                "</strong></li>" +
-                "<li>Miscellaneous Costs:  <strong>$" +
+                "</strong></h6>" +
+                "<h6 style='font-size: 16px;'>Miscellaneous Costs:  <strong>$" +
                 dataTwo[i].miscExpense +
-                "</strong></li>" +
-                "</ul>",
+                "</strong></h6>" +
+                "</div>",
               "</div>",
               "</div>"
             ].join("")
