@@ -37,13 +37,8 @@ var userResults = function() {
     for(let i = 0; i < userData.length; i++) {
       var userId = userData[i].id;
       var userItem = userData[i];
-      //grabbing the information for expense data
-      cityAPI.grabExpenses(userId).then(function(expenseData) {
-        // grabbing all the expense data for the filtered users and spitting them out to DOM
-        // test to grab individual values
-        console.log(expenseData[i]);
-        //structuring card items
-        var $div = $("<div>");
+
+      var $div = $("<div>");
         // card class
         var $card = $div.addClass("card");
         var $cardHead = $("<div>").attr({
@@ -57,7 +52,15 @@ var userResults = function() {
           "data-target" : `#collapse${i}`,
           "aria-expanded" : "false",
           "aria-controls" : `collapse${i}`
-        }).html(`<h2 class="cityResult">User: <span style="color: darkblue;">${userItem.name}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Budget: <span style="color: green;">$${userItem.initialBudget}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Duration: <span style="color: purple;">${userItem.startDate} ~ ${userItem.endDate}</span></h2>`);
+        }).html(`<h4 class="cityResult">User: <span style="color: darkblue;">${userItem.name}</span>&nbsp;&nbsp;&nbsp;Budget: <span style="color: green;">$${userItem.initialBudget}</span>&nbsp;&nbsp;&nbsp;Duration: <span style="color: purple;">${userItem.startDate} ~ ${userItem.endDate}</span></h4>`);
+        
+      //grabbing the information for expense data
+      cityAPI.grabExpenses(userId).then(function(expenseData) {
+        // grabbing all the expense data for the filtered users and spitting them out to DOM
+        // test to grab individual values
+        console.log(expenseData[i]);
+        //structuring card items
+        
         // creating the div for the content of accordion
         var $cardBodyDiv = $("<div style='text-align: center;'>").attr({
           id: `collapse${i}`,
@@ -68,11 +71,11 @@ var userResults = function() {
         var $bodyDiv = $("<div>").addClass("card-body");
         $bodyDiv.append(`
           <div class= "userExpense">
-            <h5>Lodging: <span style="color: green;">$${expenseData[i].dailyHotelExpense}</span></h5>
-            <h5>Food: <span style="color: green;">$${expenseData[i].dailyMealExpense}</span></h5>
-            <h5>Airfare: <span style="color: green;">$${expenseData[i].airfareExpense}</span></h5>
-            <h5>Transportation: <span style="color: green;">$${expenseData[i].transportationExpense}</span></h5>
-            <h5>Miscellaneous Costs: <span style="color: green;">$${expenseData[i].miscExpense}</span></h5>
+            <h5>Lodging: <span style="color: green;">$${expenseData[0].dailyHotelExpense}</span></h5>
+            <h5>Food: <span style="color: green;">$${expenseData[0].dailyMealExpense}</span></h5>
+            <h5>Airfare: <span style="color: green;">$${expenseData[0].airfareExpense}</span></h5>
+            <h5>Transportation: <span style="color: green;">$${expenseData[0].transportationExpense}</span></h5>
+            <h5>Miscellaneous Costs: <span style="color: green;">$${expenseData[0].miscExpense}</span></h5>
         `)
         // piecing together the appends
         // appending button to h5 element
