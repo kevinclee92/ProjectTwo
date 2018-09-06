@@ -54,8 +54,10 @@ var tripExample = function() {
   expenseAPI.getUserExamples().then(function(data) {
     $("#tripExamples").empty();
     var $examples = data.map(function(example) {
-      var $a = $("<a>")
-        .text(`${example.name} ${example.city} ${example.startDate} ${example.endDate} $${example.initialBudget}`)
+      var $a = $("<h5>")
+        .html(`
+        <h5>Name: <span style="font-weight: bold; color: darkblue;">${example.name}</span> &nbsp;||&nbsp; City: <span style="font-weight: bold; color: darkblue;">${example.city}</span></h5>
+        <h6>Budget: <span style="font-weight: bold; color: green;">$${example.initialBudget}</span> &nbsp;||&nbsp; ${example.startDate} ~ ${example.endDate} </h6>`)
         .attr("href", "/tripPlanning/" + example.id);
 
       var $li = $("<li>")
@@ -65,11 +67,7 @@ var tripExample = function() {
         })
         .append($a);
 
-      var $button = $("<button>")
-        .addClass("btn btn-danger float-right delete")
-        .text("ｘ");
-
-      $li.append($button);
+     
 
       return $li;
     })
